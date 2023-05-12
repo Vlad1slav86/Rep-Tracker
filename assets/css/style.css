@@ -1,0 +1,38 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  h1 {
+    color: darkblue;
+  }
+  
+  #app {
+    background-color: darkblue;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+  }
+  
+  #app h2 {
+    color: white;
+  }
+  
+  #app .day {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  #app .day input {
+    width: 80px;
+    padding: 5px;
+  }
+  
+  #app .total-reps {
+    margin-top: 10px;
+    font-weight: bold;
+    color: white;
+  }
+  
