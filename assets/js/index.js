@@ -39,6 +39,7 @@ function saveToLocalStorage() {
 
 // Create the app UI
 
+
 // Create the app UI
 function render() {
     // Get the current month and year
@@ -59,7 +60,17 @@ function render() {
   
     // Define the app HTML structure
     const appHtml = `
-      <h2>${currentMonth + 1}/${currentYear}</h2>
+      <div class="header">
+        <h2>${currentMonth + 1}/${currentYear}</h2>
+        <div class="exercise">
+          <label for="exercise-input">Exercise:</label>
+          <input id="exercise-input" type="text" value="${exercise}" onchange="updateExercise(this.value)">
+        </div>
+        <div class="rep-goal">
+          <label for="rep-goal-input">Rep Goal:</label>
+          <input id="rep-goal-input" type="number" value="${repGoal}" onchange="updateRepGoal(this.value)">
+        </div>
+      </div>
       <table>
         <thead>
           <tr>
@@ -80,6 +91,18 @@ function render() {
   
     // Render the past challenges
     renderPastChallenges();
+  }
+  
+  // Update the exercise
+  function updateExercise(newExercise) {
+    exercise = newExercise;
+    saveToLocalStorage();
+  }
+  
+  // Update the rep goal
+  function updateRepGoal(newRepGoal) {
+    repGoal = parseInt(newRepGoal);
+    saveToLocalStorage();
   }
   
   // Generate the calendar rows
@@ -248,9 +271,7 @@ function deletePastChallenge(index) {
       pastChallengesContainer.appendChild(challengeContainer);
     });
   }
-  
-  // ...
-  
+    
   // Load data from local storage
   loadFromLocalStorage();
   
@@ -258,9 +279,3 @@ function deletePastChallenge(index) {
   render();
   
 
-  // Load data from local storage
-  loadFromLocalStorage();
-  
-  // Render the app UI
-  render();
-  

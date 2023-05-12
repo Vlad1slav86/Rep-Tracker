@@ -5,8 +5,8 @@ body {
     padding: 20px;
   }
   
-  h1 {
-    color: darkblue;
+  h2 {
+    color: white;
   }
   
   #app {
@@ -16,7 +16,7 @@ body {
     border-radius: 5px;
   }
   
-  #app h2 {
+  #app h2, #app .total-reps {
     color: white;
   }
   
@@ -33,6 +33,32 @@ body {
   #app .total-reps {
     margin-top: 10px;
     font-weight: bold;
+  }
+  
+  .container {
+    /* Existing styles for larger screens */
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    /* Existing styles for the title */
+    text-align: center;
     color: white;
+  }
+  
+  /* Updated styles for mobile devices */
+  @media only screen and (max-width: 600px) {
+    .container {
+      /* Adjusted styles for mobile devices */
+      max-width: 90%;
+      margin: 0 auto;
+    }
+    
+    h1 {
+      /* Adjusted styles for the title on mobile devices */
+      text-align: center;
+      color: white;
+    }
   }
   
