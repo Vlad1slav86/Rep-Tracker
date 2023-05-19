@@ -9,14 +9,15 @@ body {
     color: white;
   }
   
-  #app {
+#app td {
   background-color: darkblue;
   padding: 20px;
   margin-top: 20px;
   border-radius: 5px;
   overflow-x: auto; 
+  padding: 5px;
   text-align: center;
-  width: 14%; 
+  width: 14%; /* Add this line to set the width of each table cell */
 }
 
   
